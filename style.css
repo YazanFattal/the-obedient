@@ -701,3 +701,24 @@ font-size:22px;
     font-size:14px;
 
 }
+
+/* Active Navigation */
+
+.top-nav a.active{
+
+    background: var(--green);
+
+    color: white;
+
+    box-shadow: 0 6px 20px rgba(20,61,34,.25);
+
+    transition: .3s;
+}
+
+body.dark-mode .top-nav a.active{
+
+    background: var(--stone);
+
+    color: #111;
+
+}
