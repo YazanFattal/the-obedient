@@ -1,207 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Obedient</title>
+  <link rel="icon" type="image/png" href="images/favicon.png" />
 
-    <title>The Obedient</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <link rel="icon" type="image/png" href="images/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="style.css">
-
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
-<!-- ================= HERO ================= -->
+  <!-- ================= HERO / COVER ================= -->
 
-<header class="hero">
+  <header class="hero" id="cover">
+
+    <nav class="top-nav">
+      <a href="#about">About</a>
+      <a href="#chapter1">Book</a>
+      <a href="#news">News</a>
+
+      <button id="darkModeToggle" class="dark-toggle">
+        🌙
+      </button>
+    </nav>
 
     <div class="hero-content">
+      <img src="images/favicon.png" class="hero-logo" alt="The Obedient emblem" />
 
-        <img src="images/favicon.png" class="hero-logo">
+      <h1>THE OBEDIENT</h1>
 
-        <h1>THE OBEDIENT</h1>
+      <h3>Official Digital Archive</h3>
 
-        <h3>Digital National Archive</h3>
+      <p>
+        One Nation. Four States. One Principle.
+      </p>
 
-        <p>
-            One Nation.
-            Four States.
-            One Principle.
-        </p>
+      <h2>RESPECT</h2>
 
-        <h2>RESPECT</h2>
-
-        <a href="#chapter1" class="btn">
-            Open The Book
-        </a>
-
+      <a href="#toc" class="btn">
+        Open The Book
+      </a>
     </div>
 
-</header>
-
-<!-- ================= BOOK ================= -->
-
-<main class="book">
-
-<!-- ================= PAGE 1 ================= -->
-
-<section class="page" id="chapter1">
-
-<div class="page-title">
-
-<span>CHAPTER I</span>
-
-<h2>THE OBEDIENT</h2>
-
-<p>
-The national identity of The Obedient consists of four official state flags.
-</p>
-
-</div>
-
-<img src="images/TheObedientUnited.png">
-
-</section>
-
-<!-- ================= PAGE 2 ================= -->
-
-<section class="page">
-
-<div class="page-title">
-
-<span>CHAPTER II</span>
-
-<h2>THE FOUR STATE FLAGS</h2>
-
-<p>
-
-The primary national flag.
-
-The union of all states.
-
-</p>
-
-</div>
-
-<img src="images/XMode.png">
-
-</section>
-
-<!-- ================= PAGE 3 ================= -->
-
-<section class="page">
-
-<div class="page-title">
-
-<span>CHAPTER III</span>
-
-<h2>OFFICIAL CURRENCY</h2>
-
-<p>
-
-Official banknotes and national identity.
-
-</p>
-
-</div>
-
-<img src="images/CurrencyFrontandBack.png">
-
-</section>
-
-<!-- ================= PAGE 4 ================= -->
-
-<section class="page philosophy">
-
-<div class="page-title">
-
-<span>CHAPTER IV</span>
-
-<h2>OUR PHILOSOPHY</h2>
-
-</div>
-
-<div class="grid">
-
-<div class="card">
-
-<h3>01</h3>
-
-<h4>Respect Above All</h4>
-
-</div>
-
-<div class="card">
-
-<h3>02</h3>
-
-<h4>The Mind Controls Everything</h4>
-
-</div>
-
-<div class="card">
-
-<h3>03</h3>
-
-<h4>The Soul Owns The Body</h4>
-
-</div>
-
-<div class="card">
-
-<h3>04</h3>
-
-<h4>Allah Is Everywhere</h4>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ================= PAGE 5 ================= -->
-
-<section class="page final">
-
-<h2>
-
-Only The Obedient Will Enter It
-
-</h2>
-
-<h3>
-
-لن يدخلها إلا المطيع
-
-</h3>
-
-</section>
-
-</main>
-
-<footer>
-
-<p>
-
-© The Obedient
-
-</p>
-
-</footer>
-
-<script src="script.js"></script>
-
+  </header>
+
+  <!-- ================= BOOK ================= -->
+
+  <main class="book">
+
+    <!-- ================= TABLE OF CONTENTS ================= -->
+
+    <section class="page toc" id="toc">
+      <div class="page-title">
+        <span>CONTENTS</span>
+        <h2>Table of Contents</h2>
+        <p>
+          A digital book presenting the identity, philosophy, flag system,
+          and official currency of The Obedient.
+        </p>
+      </div>
+
+      <ul class="toc-list">
+        <li><a href="#about">01 · About Us</a></li>
+        <li><a href="#chapter1">02 · The Obedient</a></li>
+        <li><a href="#chapter2">03 · The Four State Flags</a></li>
+        <li><a href="#chapter3">04 · Official Currency</a></li>
+        <li><a href="#chapter4">05 · Our Philosophy</a></li>
+        <li><a href="#news">06 · News</a></li>
+      </ul>
+
+      <div class="page-number">00</div>
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+
+    <section class="page" id="about">
+      <div class="page-title">
+        <span>ABOUT US</span>
+        <h2>About The Obedient</h2>
+        <p>
+          The Obedient is a fictional nation identity project built around
+          respect, symbolism, philosophy, flags, currency, and visual storytelling.
+          It is presented as a digital book and national archive.
+        </p>
+      </div>
+
+      <div class="page-number">01</div>
+    </section>
+
+    <!-- ================= PAGE 1 ================= -->
+
+    <section class="page" id="chapter1">
+      <div class="page-title">
+        <span>CHAPTER I</span>
+        <h2>THE OBEDIENT</h2>
+        <p>
+          The national identity of The Obedient consists of four official state
+          flags. Each mode represents a condition of the nation and its values.
+        </p>
+      </div>
+
+      <img src="images/TheObedientUnited.png" alt="The Obedient four state flags" />
+
+      <div class="page-number">02</div>
+    </section>
+
+    <!-- ================= PAGE 2 ================= -->
+
+    <section class="page" id="chapter2">
+      <div class="page-title">
+        <span>CHAPTER II</span>
+        <h2>THE FOUR STATE FLAGS</h2>
+        <p>
+          X Mode is the primary national flag. It unites the Grey, Black,
+          and Red modes into one official symbol.
+        </p>
+      </div>
+
+      <img src="images/XMode.png" alt="X Mode main flag" />
+
+      <div class="page-number">03</div>
+    </section>
+
+    <!-- ================= PAGE 3 ================= -->
+
+    <section class="page" id="chapter3">
+      <div class="page-title">
+        <span>CHAPTER III</span>
+        <h2>OFFICIAL CURRENCY</h2>
+        <p>
+          The official currency consists of 10, 20, 50, and 100. The visual
+          system focuses on nature, symbols, and national identity.
+        </p>
+      </div>
+
+      <img src="images/CurrencyFrontandBack.png" alt="The Obedient official currency" />
+
+      <div class="page-number">04</div>
+    </section>
+
+    <!-- ================= PAGE 4 ================= -->
+
+    <section class="page philosophy" id="chapter4">
+      <div class="page-title">
+        <span>CHAPTER IV</span>
+        <h2>OUR PHILOSOPHY</h2>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <h3>01</h3>
+          <h4>Respect Above All</h4>
+        </div>
+
+        <div class="card">
+          <h3>02</h3>
+          <h4>The Mind Controls Everything</h4>
+        </div>
+
+        <div class="card">
+          <h3>03</h3>
+          <h4>The Soul Owns The Body</h4>
+        </div>
+
+        <div class="card">
+          <h3>04</h3>
+          <h4>Allah Is Everywhere</h4>
+        </div>
+      </div>
+
+      <div class="page-number">05</div>
+    </section>
+
+    <!-- ================= NEWS ================= -->
+
+    <section class="page" id="news">
+      <div class="page-title">
+        <span>NEWS</span>
+        <h2>National News</h2>
+        <p>
+          No official news has been published yet.
+        </p>
+      </div>
+
+      <div class="news-card">
+        <span>COMING SOON</span>
+        <h3>National updates will appear here.</h3>
+        <p>
+          Future announcements, visual releases, national symbols,
+          and archive updates can be added to this section.
+        </p>
+      </div>
+
+      <div class="page-number">06</div>
+    </section>
+
+    <!-- ================= FINAL PAGE ================= -->
+
+    <section class="page final" id="final">
+      <h2>Only The Obedient Will Enter It</h2>
+      <h3>لن يدخلها إلا المطيع</h3>
+
+      <div class="page-number">07</div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+
+  <footer>
+    <p>© The Obedient</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
-
 </html>
