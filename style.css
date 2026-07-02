@@ -692,7 +692,7 @@ font-size:22px;
 
     transform:translateX(-50%);
 
-    background:white;
+    background:transparent;
 
     color:var(--green);
 
