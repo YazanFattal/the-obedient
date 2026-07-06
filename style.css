@@ -28,6 +28,22 @@ body {
   overflow-x: hidden;
 }
 
+/* ===========================
+   GLOBAL IMAGE STYLE
+=========================== */
+
+img{
+
+    display:block;
+
+    max-width:100%;
+
+    height:auto;
+
+    border-radius:28px;
+
+}
+
 h1, h2, h3, h4 {
   font-family: "Cinzel", serif;
 }
@@ -43,7 +59,7 @@ h1, h2, h3, h4 {
   background: rgba(255,255,255,0.85);
   backdrop-filter: blur(14px);
   border: 1px solid var(--border);
-  border-radius: 50px;
+  border-radius: 999px;
   padding: 8px;
 }
 
@@ -79,10 +95,11 @@ h1, h2, h3, h4 {
   background: var(--cream);
 }
 
-.hero-logo {
+/*.hero-logo {
   width: 120px;
   margin-bottom: 25px;
 }
+*/
 
 .hero h1 {
   font-size: clamp(48px, 9vw, 140px);
@@ -115,7 +132,7 @@ h1, h2, h3, h4 {
   color: var(--green);
   text-decoration: none;
   letter-spacing: 2px;
-  border-radius: 50px;
+  border-radius: 999px;
   transition: 0.3s ease;
 }
 
@@ -157,14 +174,32 @@ h1, h2, h3, h4 {
   font-size: 18px;
 }
 
-.page img {
-  width: 100%;
-  max-height: 78vh;
-  object-fit: contain;
-  border-radius: 18px;
-  box-shadow: 0 25px 60px rgba(0,0,0,0.12);
-  background: white;
-  cursor: zoom-in;
+.page img{
+
+    width:100%;
+
+    max-height:78vh;
+
+    display:block;
+
+    object-fit:contain;
+
+    border-radius:28px;
+
+    overflow:hidden;
+
+    overflow-clip-margin:content-box;
+
+    clip-path: inset(0 round 28px);
+
+    box-shadow:0 20px 60px rgba(0,0,0,.12);
+
+}
+
+.page img:hover{
+
+    transform:scale(1.01);
+
 }
 
 .toc-list {
@@ -200,7 +235,7 @@ h1, h2, h3, h4 {
   background: var(--card);
   border: 1px solid var(--border);
   padding: 32px;
-  border-radius: 18px;
+  border-radius: 28px;
 }
 
 .card {
@@ -324,8 +359,8 @@ body.dark-mode .dark-toggle:hover {
   color: #111;
 }
 
-body.dark-mode .page img {
-  background: #151515;
+body.dark-mode .page img{
+    background:transparent;
 }
 
 body.dark-mode .lightbox {
@@ -451,12 +486,11 @@ body.dark-mode .lightbox {
 
     border:1px solid #dedede;
 
-    border-radius:24px;
+    border-radius:28px;
 
     padding:55px;
 
-    box-shadow:0 18px 45px rgba(0,0,0,.08);
-
+    box-shadow:0 20px 60px rgba(0,0,0,.10);
 }
 
 .news-article h3{
@@ -720,5 +754,190 @@ body.dark-mode .top-nav a.active{
     background: var(--stone);
 
     color: #111;
+
+}
+
+/* ===========================
+   HOUSE OF CONNECTION
+=========================== */
+
+.house-layout {
+  display: grid;
+  grid-template-columns: 1.6fr 0.85fr;
+  gap: 38px;
+  align-items: stretch;
+}
+
+.house-gallery{
+
+    background:transparent;
+
+    padding:0;
+
+    border:none;
+
+    box-shadow:none;
+
+}
+
+.house-image{
+
+    width:100%;
+
+    display:block;
+
+    border-radius:28px;
+
+    object-fit:cover;
+
+    overflow:hidden;
+
+    transition:.35s ease;
+
+}
+
+.house-image:hover{
+
+    transform:scale(1.01);
+
+}
+
+.gallery-controls{
+
+    margin-top:22px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:20px;
+
+}
+
+.gallery-controls button {
+  padding: 12px 24px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--green);
+  cursor: pointer;
+  font-family: "Inter", sans-serif;
+}
+
+.gallery-controls button:hover {
+  background: var(--green);
+  color: white;
+}
+
+#houseCounter{
+
+    color: var(--green);
+
+    font-family:"Cinzel",serif;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    min-width:60px;
+
+    text-align:center;
+
+}
+
+body.dark-mode #houseCounter{
+
+    color:var(--stone);
+
+}
+
+.house-info {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.house-info div {
+  flex: 1;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 34px;
+}
+
+.house-info span {
+  color: var(--red);
+  font-family: "Cinzel", serif;
+  letter-spacing: 4px;
+}
+
+.house-info h3 {
+  color: var(--green);
+  font-size: 34px;
+  margin: 18px 0;
+}
+
+.house-info p {
+  line-height: 1.8;
+  font-size: 18px;
+}
+
+body.dark-mode .gallery-controls button {
+  background: #181818;
+  color: var(--stone);
+}
+
+body.dark-mode .gallery-controls button:hover {
+  background: var(--stone);
+  color: #111;
+}
+
+body.dark-mode .house-info h3 {
+  color: var(--stone);
+}
+
+@media (max-width: 900px) {
+  .house-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .house-gallery {
+    padding: 16px;
+  }
+}
+
+::selection{
+
+    background:var(--green);
+
+    color:white;
+
+}
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:var(--cream);
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--green);
+
+    border-radius:999px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#0f2f1a;
 
 }

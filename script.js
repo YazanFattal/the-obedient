@@ -60,7 +60,7 @@ window.addEventListener("scroll", () => {
         }
 
         if(
-            ["chapter1","chapter2","chapter3","chapter4","toc","final"].includes(current)
+            ["chapter1","chapter2","chapter3","chapter4","chapter5","toc","final"].includes(current)
             && href === "#chapter1"
         ){
 
@@ -77,3 +77,35 @@ window.addEventListener("scroll", () => {
     });
 
 });
+
+const houseImages = [
+  "images/HouseOfConnection1.png",
+  "images/HouseOfConnection2.png",
+  "images/HouseOfConnection3.png"
+
+];
+
+let currentHouse = 0;
+
+const houseImage = document.getElementById("houseImage");
+const houseCounter = document.getElementById("houseCounter");
+const nextHouse = document.getElementById("nextHouse");
+const prevHouse = document.getElementById("prevHouse");
+
+function updateHouseImage() {
+  houseImage.src = houseImages[currentHouse];
+  houseCounter.textContent = `${currentHouse + 1} / ${houseImages.length}`;
+}
+
+if (houseImage && nextHouse && prevHouse && houseCounter) {
+  nextHouse.addEventListener("click", () => {
+    currentHouse = (currentHouse + 1) % houseImages.length;
+    updateHouseImage();
+  });
+
+  prevHouse.addEventListener("click", () => {
+    currentHouse =
+      currentHouse === 0 ? houseImages.length - 1 : currentHouse - 1;
+    updateHouseImage();
+  });
+}
