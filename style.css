@@ -1105,3 +1105,99 @@ body.dark-mode .guest-house-content p {
     height: 300px;
   }
 }
+
+/* ===========================
+   CHAPTER 9
+=========================== */
+
+.chapter-description{
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+    margin-top:45px;
+
+}
+
+.chapter-box{
+
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:18px;
+    padding:30px;
+    transition:.3s;
+
+}
+
+.chapter-box:hover{
+
+    transform:translateY(-6px);
+
+}
+
+.chapter-box h3{
+
+    color:var(--green);
+    margin-bottom:15px;
+    font-size:28px;
+
+}
+
+.chapter-box p{
+
+    line-height:1.8;
+    font-size:17px;
+
+}
+
+.quote-box{
+
+    margin-top:45px;
+    padding:35px;
+    background:#eef3ee;
+    border-radius:18px;
+    text-align:center;
+
+}
+
+.quote-box h3{
+
+    color:var(--green);
+    font-size:34px;
+
+}
+
+body.dark-mode .quote-box{
+
+    background:#181818;
+
+}
+
+body.dark-mode .chapter-box{
+
+    background:#181818;
+
+}
+
+body.dark-mode .chapter-box h3,
+body.dark-mode .quote-box h3{
+
+    color:var(--stone);
+
+}
+
+@media(max-width:900px){
+
+.chapter-description{
+
+grid-template-columns:1fr;
+
+}
+
+.quote-box h3{
+
+font-size:24px;
+
+}
+
+}

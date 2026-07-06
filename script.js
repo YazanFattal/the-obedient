@@ -60,7 +60,7 @@ window.addEventListener("scroll", () => {
         }
 
         if(
-            ["chapter1","chapter2","chapter3","chapter4","chapter5","chapter6","chapter7", "chapter8","toc","final"].includes(current)
+            ["chapter1","chapter2","chapter3","chapter4","chapter5","chapter6","chapter7", "chapter8","chapter9","toc","final"].includes(current)
             && href === "#chapter1"
         ){
 
