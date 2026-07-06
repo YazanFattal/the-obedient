@@ -941,3 +941,85 @@ body.dark-mode .house-info h3 {
     background:#0f2f1a;
 
 }
+
+/* ===========================
+   TRANSPORTATION PAGE
+=========================== */
+
+.transport-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-top: 35px;
+}
+
+.transport-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  padding: 45px 35px;
+  text-align: center;
+  transition: 0.35s ease;
+}
+
+.transport-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.1);
+}
+
+.transport-icon {
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 25px;
+  border: 1px solid var(--green);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 42px;
+}
+
+.transport-card h3 {
+  color: var(--green);
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+.transport-card p {
+  line-height: 1.8;
+  color: #555;
+}
+
+.transport-note {
+  margin: 55px auto 0;
+  max-width: 900px;
+  text-align: center;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--green);
+  font-size: 15px;
+  border-top: 1px solid var(--border);
+  padding-top: 28px;
+}
+
+body.dark-mode .transport-card {
+  background: #181818;
+}
+
+body.dark-mode .transport-card p {
+  color: #d4d4d4;
+}
+
+body.dark-mode .transport-card h3,
+body.dark-mode .transport-note {
+  color: var(--stone);
+}
+
+body.dark-mode .transport-icon {
+  border-color: var(--stone);
+}
+
+@media(max-width: 900px) {
+  .transport-grid {
+    grid-template-columns: 1fr;
+  }
+}
