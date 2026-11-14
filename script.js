@@ -21,10 +21,9 @@ function showPage(index, { updateHistory = false, focus = false } = {}) {
 
   if (index !== active) {
     previous.hidden = true;
-    previous.classList.remove('turning-forward', 'turning-back');
     current.hidden = false;
     current.scrollTop = 0;
-    current.classList.add(index > active ? 'turning-forward' : 'turning-back');
+    current.querySelectorAll('.leaf').forEach(leaf => { leaf.scrollTop = 0; });
     active = index;
   }
 
@@ -37,10 +36,7 @@ function showPage(index, { updateHistory = false, focus = false } = {}) {
     history.pushState(null, '', `#${current.id}`);
   }
 
-  if (focus) {
-    title.focus({ preventScroll: true });
-    if (book.getBoundingClientRect().top < 0) window.scrollTo({ top: 0, behavior: 'instant' });
-  }
+  if (focus) title.focus({ preventScroll: true });
 }
 
 function turn(distance) {
