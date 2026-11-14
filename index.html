@@ -1,96 +1,70 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>The Obedient</title>
-  <link rel="icon" type="image/png" href="images/favicon.png" />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
-
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#222822">
+  <title>The Obedient — Official Digital Archive</title>
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
-
 <body>
-
-  <!-- ================= HERO / COVER ================= -->
-
-  <header class="hero" id="cover">
-
-    <nav class="top-nav">
-      <a href="#about">About</a>
-      <a href="#chapter1">Book</a>
-      <a href="#news">Rules</a>
-
-      <button id="darkModeToggle" class="dark-toggle">
-        🌙
-      </button>
-    </nav>
-
-    <div class="hero-content">
-      <!-- <img src="images/favicon.png" class="hero-logo" alt="The Obedient emblem" /> -->
-
-      <h1>THE OBEDIENT</h1>
-
-      <h3>Official Digital Archive</h3>
-
-      <p>
-        One Nation. Four States. One Principle.
-      </p>
-
-      <h2>RESPECT</h2>
-
-      <a href="#toc" class="btn">
-        Open The Book
-      </a>
-    </div>
-
+  <header class="masthead">
+    <a class="wordmark" href="#cover"><img src="images/favicon.png" alt="" width="30" height="30">The Obedient</a>
+    <a class="index-link" href="#toc"><span aria-hidden="true">☰</span> Contents</a>
   </header>
-
-  <!-- ================= BOOK ================= -->
-
-  <main class="book">
-
-    <!-- ================= TABLE OF CONTENTS ================= -->
-
-    <section class="page toc" id="toc">
-      <div class="page-title">
-        <span>CONTENTS</span>
-        <h2>Table of Contents</h2>
-        <p>
-          A digital book presenting the identity, philosophy, flag system,
-          and official currency of The Obedient.
-        </p>
-      </div>
-
-      <ul class="toc-list">
-        <li><a href="#about">00 · About Us</a></li>
-        <li><a href="#chapter1">01 · The Obedient</a></li>
-        <li><a href="#chapter2">02 · The Four State Flags</a></li>
-        <li><a href="#chapter3">03 · Official Currency</a></li>
-        <li><a href="#chapter4">04 · Our Philosophy</a></li>
-        <li><a href="#chapter5">05 · House of Connection</a></li>
-        <li><a href="#chapter6">06 · Transportation</a></li>
-        <li><a href="#chapter7">07 · Guest House</a></li>
-        <li><a href="#chapter8">08 · Community Facilities</a></li>
-        <li><a href="#chapter9">09 · House of Forgiveness</a></li>
-        <li><a href="#chapter10">10 · Security & Aid Robots</a></li>
-        <li><a href="#news">11 · Rules</a></li>
-      </ul>
-
-      <!-- <div class="page-number">00</div> -->
-    </section>
-
-    <!-- ================= ABOUT ================= -->
-
-    <section class="page" id="about">
-      <div class="page-title">
+  <main class="reader">
+    <div class="book-frame" aria-label="The Obedient book">
+      <div class="book" id="book">
+        <section class="spread cover" id="cover" aria-labelledby="cover-title">
+          <div class="leaf leaf-left">
+            <div class="cover-type">
+              <p class="eyebrow">Official Digital Archive</p>
+              <h1 id="cover-title" tabindex="-1"><span>The</span> Obedient</h1>
+              <span class="cover-rule" aria-hidden="true"></span>
+              <p class="cover-motto">One Nation. Four States.<br>One Principle.</p>
+            </div>
+          </div>
+          <div class="leaf leaf-right">
+            <div class="cover-plate">
+              <img class="cover-emblem" src="images/favicon.png" alt="The Obedient emblem" width="500" height="500">
+              <p>Respect</p>
+            </div>
+          </div>
+        </section>
+        <section class="spread contents" id="toc" aria-labelledby="toc-title" hidden>
+          <div class="leaf leaf-left">
+            <p class="eyebrow">The Obedient</p>
+            <h2 id="toc-title" tabindex="-1">Contents</h2>
+            <ol class="contents-list">
+              <li><a href="#about"><span>00</span>About Us</a></li>
+              <li><a href="#chapter1"><span>01</span>The Obedient</a></li>
+              <li><a href="#chapter2"><span>02</span>The Four State Flags</a></li>
+              <li><a href="#chapter3"><span>03</span>Official Currency</a></li>
+              <li><a href="#chapter4"><span>04</span>Our Philosophy</a></li>
+              <li><a href="#chapter5"><span>05</span>House of Connection</a></li>
+            </ol>
+          </div>
+          <div class="leaf leaf-right">
+            <ol class="contents-list contents-continuation">
+              <li><a href="#chapter6"><span>06</span>Transportation</a></li>
+              <li><a href="#chapter7"><span>07</span>Guest House</a></li>
+              <li><a href="#chapter8"><span>08</span>Community Facilities</a></li>
+              <li><a href="#chapter9"><span>09</span>House of Forgiveness</a></li>
+              <li><a href="#chapter10"><span>10</span>Security & Aid Robots</a></li>
+              <li><a href="#news"><span>11</span>Rules</a></li>
+              <li><a href="#final"><span>12</span>Closing page</a></li>
+            </ol>
+          </div>
+        </section>
+        <section class="spread" id="about" aria-labelledby="about-title" hidden>
+          <div class="leaf leaf-left"><div class="page-title">
         <span>ABOUT US</span>
-        <h2>About The Obedient</h2>
+        <h2 id="about-title" tabindex="-1">About The Obedient</h2>
         <p>
           The Obedient is a fictional nation identity project built around
           respect, symbolism, philosophy, flags, currency, and visual storytelling.
@@ -98,253 +72,142 @@
         </p>
       </div>
 
-      <div class="page-number">00</div>
-    </section>
-
-    <!-- ================= PAGE 1 ================= -->
-
-    <section class="page" id="chapter1">
-      <div class="page-title">
+      </div>
+          <div class="leaf leaf-right"><div class="emblem-plate"><img class="" src="images/favicon.png" alt="The Obedient emblem" width="500" height="500"></div></div>
+        </section>
+        <section class="spread" id="chapter1" aria-labelledby="chapter1-title" hidden>
+          <div class="leaf leaf-left"><div class="page-title">
         <span>CHAPTER I</span>
-        <h2>THE OBEDIENT</h2>
+        <h2 id="chapter1-title" tabindex="-1">THE OBEDIENT</h2>
         <p>
           The national identity of The Obedient consists of four official state
           flags. Each mode represents a condition of the nation and its values.
         </p>
-      </div>
-
-      <img src="images/TheObedientUnited.png" alt="The Obedient four state flags" />
-
-      <div class="page-number">01</div>
-    </section>
-
-    <!-- ================= PAGE 2 ================= -->
-
-    <section class="page" id="chapter2">
-      <div class="page-title">
+      </div></div>
+          <div class="leaf leaf-right"><figure class="plate"><a class="plate-link" href="images/TheObedientUnited.png" data-plate><img src="images/TheObedientUnited.png" alt="The Obedient four state flags" loading="lazy"></a></figure></div>
+        </section>
+        <section class="spread" id="chapter2" aria-labelledby="chapter2-title" hidden>
+          <div class="leaf leaf-left"><div class="page-title">
         <span>CHAPTER II</span>
-        <h2>THE FOUR STATE FLAGS</h2>
+        <h2 id="chapter2-title" tabindex="-1">THE FOUR STATE FLAGS</h2>
         <p>
           X Mode is the primary national flag. It unites the Grey, Black,
           and Red modes into one official symbol.
         </p>
-      </div>
-
-      <img src="images/XMode.png" alt="X Mode main flag" />
-
-      <div class="page-number">02</div>
-    </section>
-
-    <!-- ================= PAGE 3 ================= -->
-
-    <section class="page" id="chapter3">
-      <div class="page-title">
+      </div></div>
+          <div class="leaf leaf-right"><figure class="plate"><a class="plate-link" href="images/XMode.png" data-plate><img src="images/XMode.png" alt="X Mode main flag" loading="lazy"></a></figure></div>
+        </section>
+        <section class="spread" id="chapter3" aria-labelledby="chapter3-title" hidden>
+          <div class="leaf leaf-left"><div class="page-title">
         <span>CHAPTER III</span>
-        <h2>OFFICIAL CURRENCY</h2>
+        <h2 id="chapter3-title" tabindex="-1">OFFICIAL CURRENCY</h2>
         <p>
           The official currency consists of 10, 20, 50, and 100. The visual
           system focuses on nature, symbols, and national identity.
         </p>
-      </div>
-
-      <img src="images/CurrencyFrontandBack.png" alt="The Obedient official currency" />
-
-      <div class="page-number">03</div>
-    </section>
-
-    <!-- ================= PAGE 4 ================= -->
-
-    <section class="page philosophy" id="chapter4">
-      <div class="page-title">
+      </div></div>
+          <div class="leaf leaf-right"><figure class="plate"><a class="plate-link" href="images/CurrencyFrontandBack.png" data-plate><img src="images/CurrencyFrontandBack.png" alt="The Obedient official currency" loading="lazy"></a></figure></div>
+        </section>
+        <section class="spread" id="chapter4" aria-labelledby="chapter4-title" hidden>
+          <div class="leaf leaf-left"><div class="page-title">
         <span>CHAPTER IV</span>
-        <h2>OUR PHILOSOPHY</h2>
-      </div>
-
-      <div class="grid">
-        <div class="card">
-          <h3>01</h3>
-          <h4>Respect Above All</h4>
-        </div>
-
-        <div class="card">
-          <h3>02</h3>
-          <h4>The Mind Controls Everything</h4>
-        </div>
-
-        <div class="card">
-          <h3>03</h3>
-          <h4>The Soul Owns The Body</h4>
-        </div>
-
-        <div class="card">
-          <h3>04</h3>
-          <h4>Allah Is Everywhere</h4>
-        </div>
-      </div>
-
-      <div class="page-number">04</div>
-    </section>
-
-
-<!-- ================= PAGE 5 ================= -->
-
-<section class="page house-section" id="chapter5">
-  <div class="page-title">
+        <h2 id="chapter4-title" tabindex="-1">OUR PHILOSOPHY</h2>
+      </div><div class="emblem-plate emblem-small"><img class="" src="images/favicon.png" alt="The Obedient emblem" width="500" height="500"></div></div>
+          <div class="leaf leaf-right"><ol class="principles"><li>Respect Above All</li><li>The Mind Controls Everything</li><li>The Soul Owns The Body</li><li>Allah Is Everywhere</li></ol></div>
+        </section>
+        <section class="spread" id="chapter5" aria-labelledby="chapter5-title" hidden>
+          <div class="leaf leaf-left"><div class="page-title">
     <span>CHAPTER V</span>
-    <h2>HOUSE OF CONNECTION</h2>
+    <h2 id="chapter5-title" tabindex="-1">HOUSE OF CONNECTION</h2>
     <p>
       The House of Connection is a peaceful gathering place of The Obedient.
       It represents hospitality, unity, nature, and respect. The tent stands as
       a symbolic home where people meet, share stories, and build connection.
     </p>
-  </div>
-
-  <div class="house-layout">
-    <div class="house-gallery">
-      <img
-        id="houseImage"
-        src="images/HouseOfConnection1.png"
-        alt="House of Connection"
-        class="house-image"
-      />
-
-      <div class="gallery-controls">
-        <button id="prevHouse" type="button">← Previous</button>
-        <span id="houseCounter">1 / 3</span>
-        <button id="nextHouse" type="button">Next →</button>
-      </div>
-    </div>
-
-    <div class="house-info">
+  </div><div class="house-info">
       <div>
-        <span>01</span>
+        
         <h3>Hospitality</h3>
         <p>A welcoming space built for guests, conversation, and shared respect.</p>
       </div>
 
       <div>
-        <span>02</span>
+        
         <h3>Nature</h3>
         <p>Placed in greenery to represent peace, balance, and harmony with life.</p>
       </div>
 
       <div>
-        <span>03</span>
+        
         <h3>Connection</h3>
         <p>A symbolic house where people gather, listen, and understand one another.</p>
       </div>
-    </div>
-  </div>
-
-  <div class="page-number">05</div>
-</section>
-
-    <!-- ================= PAGE 6 ================= -->
-
-<!-- ================= TRANSPORTATION ================= -->
-
-<section class="page" id="chapter6">
-
-    <div class="page-title">
+    </div></div>
+          <div class="leaf leaf-right">
+            <div class="gallery" data-gallery>
+              <figure class="plate"><a class="plate-link" href="images/HouseOfConnection1.png" data-plate><img src="images/HouseOfConnection1.png" alt="House of Connection, view 1" loading="lazy"></a></figure>
+<figure class="plate" hidden><a class="plate-link" href="images/HouseOfConnection2.png" data-plate><img src="images/HouseOfConnection2.png" alt="House of Connection, view 2" loading="lazy"></a></figure>
+<figure class="plate" hidden><a class="plate-link" href="images/HouseOfConnection3.png" data-plate><img src="images/HouseOfConnection3.png" alt="House of Connection, view 3" loading="lazy"></a></figure>
+              <div class="gallery-controls" aria-label="Illustration gallery">
+                <button type="button" data-gallery-step="-1" aria-label="Previous illustration">←</button>
+                <span aria-live="polite">1 / 3</span>
+                <button type="button" data-gallery-step="1" aria-label="Next illustration">→</button>
+              </div>
+            </div></div>
+        </section>
+        <section class="spread" id="chapter6" aria-labelledby="chapter6-title" hidden>
+          <div class="leaf leaf-left"><div class="page-title">
 
         <span>CHAPTER VI</span>
 
-        <h2>TRANSPORTATION</h2>
+        <h2 id="chapter6-title" tabindex="-1">TRANSPORTATION</h2>
 
         <p>
             Official transportation approved by
             The Obedient.
         </p>
 
-    </div>
-
-    <img src="images/Transportation.png"
-         alt="Transportation"
-         class="book-image">
-
-    <div class="page-number">06</div>
-
-</section>
-
-<!-- ================= GUEST HOUSE ================= -->
-
-<section class="page" id="chapter7">
-
-  <div class="page-title">
+    </div></div>
+          <div class="leaf leaf-right"><figure class="plate"><a class="plate-link" href="images/Transportation.png" data-plate><img src="images/Transportation.png" alt="Transportation" loading="lazy"></a></figure></div>
+        </section>
+        <section class="spread guest-spread" id="chapter7" aria-labelledby="chapter7-title" hidden>
+          <div class="leaf leaf-left"><div class="page-title">
     <span>CHAPTER VII</span>
-    <h2>GUEST HOUSE</h2>
+    <h2 id="chapter7-title" tabindex="-1">GUEST HOUSE</h2>
     <p>
       A peaceful retreat for visitors of The Obedient.
       Guests can choose between a standard guest house and a deluxe double-deck guest house.
     </p>
-  </div>
-
-  <div class="guest-house-grid">
-
-    <article class="guest-house-card">
-      <img src="images/GuestHouseStandard.png" alt="Standard Guest House">
-
-      <div class="guest-house-content">
-        <span>STANDARD</span>
-        <h3>Standard Guest House</h3>
+  </div><article class="guest-house-card"><figure class="plate"><a class="plate-link" href="images/GuestHouseStandard.png" data-plate><img src="images/GuestHouseStandard.png" alt="Standard Guest House" loading="lazy"></a></figure><h3>Standard Guest House</h3>
         <p>
           A calm and elegant guest tent designed for rest, comfort, and short stays.
           Includes sleeping space, lounge area, warm lighting, and access to the swimming fountain.
         </p>
-      </div>
-    </article>
-
-    <article class="guest-house-card">
-      <img src="images/GuestHouseDeluxe.png" alt="Deluxe Guest House">
-
-      <div class="guest-house-content">
-        <span>DELUXE</span>
-        <h3>Double-Deck Guest House</h3>
+      </article></div>
+          <div class="leaf leaf-right"><article class="guest-house-card"><figure class="plate"><a class="plate-link" href="images/GuestHouseDeluxe.png" data-plate><img src="images/GuestHouseDeluxe.png" alt="Deluxe Guest House" loading="lazy"></a></figure><h3>Double-Deck Guest House</h3>
         <p>
           A premium two-level guest house with bedroom, lounge, kitchen, dining space,
           private toilet, balcony, and direct view of the fountain swimming pool.
         </p>
-      </div>
-    </article>
-
-  </div>
-
-  <div class="page-number">07</div>
-
-</section>
-
-<!-- ================= COMMUNITY FACILITIES ================= -->
-
-<section class="page" id="chapter8">
-
-  <div class="page-title">
+      </article></div>
+        </section>
+        <section class="spread" id="chapter8" aria-labelledby="chapter8-title" hidden>
+          <div class="leaf leaf-left"><div class="page-title">
     <span>CHAPTER VIII</span>
-    <h2>COMMUNITY FACILITIES</h2>
+    <h2 id="chapter8-title" tabindex="-1">COMMUNITY FACILITIES</h2>
     <p>
       Essential public spaces of The Obedient, including the supermarket
       and restaurant, designed for daily life, gathering, and connection.
     </p>
-  </div>
-
-  <img 
-    src="images/CommunityFacilities.png" 
-    alt="Community Facilities of The Obedient"
-    class="book-image"
-  />
-
-  <div class="page-number">08</div>
-
-</section>
-
-<!-- ================= PAGE 9 ================= -->
-
-<section class="page" id="chapter9">
-
-    <div class="page-title">
+  </div></div>
+          <div class="leaf leaf-right"><figure class="plate"><a class="plate-link" href="images/CommunityFacilities.png" data-plate><img src="images/CommunityFacilities.png" alt="Community Facilities of The Obedient" loading="lazy"></a></figure></div>
+        </section>
+        <section class="spread" id="chapter9" aria-labelledby="chapter9-title" hidden>
+          <div class="leaf leaf-left"><div class="page-title">
 
         <span>CHAPTER IX</span>
 
-        <h2>HOUSE OF FORGIVENESS</h2>
+        <h2 id="chapter9-title" tabindex="-1">HOUSE OF FORGIVENESS</h2>
 
         <p>
             The House of Forgiveness is a place dedicated to reflection,
@@ -353,9 +216,6 @@
         </p>
 
     </div>
-
-    <img src="images/HouseOfForgiveness.png"
-         alt="House of Forgiveness">
 
     <div class="chapter-description">
 
@@ -385,47 +245,24 @@
 
     </div>
 
-    <div class="quote-box">
-
-        <h3>
-            "Forgiveness is strength. Peace begins within."
-        </h3>
-
     </div>
-
-    <div class="page-number">09</div>
-
-</section>
-
-<!-- ================= CHAPTER 10 ================= -->
-
-<section class="page" id="chapter10">
-
-  <div class="page-title">
+          <div class="leaf leaf-right"><figure class="plate"><a class="plate-link" href="images/HouseOfForgiveness.png" data-plate><img src="images/HouseOfForgiveness.png" alt="House of Forgiveness" loading="lazy"></a></figure><blockquote>Forgiveness is strength. Peace begins within.</blockquote></div>
+        </section>
+        <section class="spread" id="chapter10" aria-labelledby="chapter10-title" hidden>
+          <div class="leaf leaf-left"><div class="page-title">
     <span>CHAPTER X</span>
-    <h2>SECURITY & AID ROBOTS</h2>
+    <h2 id="chapter10-title" tabindex="-1">SECURITY & AID ROBOTS</h2>
     <p>
       Autonomous aid and security units designed to patrol, assist citizens,
       deliver supplies, and respond to emergencies across The Obedient.
     </p>
-  </div>
-
-  <img
-    src="images/SecurityAidRobot.png"
-    alt="Security and aid robot riding a fat bike"
-    class="book-image"
-  />
-
-  <div class="page-number">10</div>
-
-</section>
-
-    <!-- ================= NEWS ================= -->
-
-    <section class="page" id="news">
-  <div class="page-title">
+  </div></div>
+          <div class="leaf leaf-right"><figure class="plate"><a class="plate-link" href="images/SecurityAidRobot.png" data-plate><img src="images/SecurityAidRobot.png" alt="Security and aid robot riding a fat bike" loading="lazy"></a></figure></div>
+        </section>
+        <section class="spread" id="news" aria-labelledby="news-title" hidden>
+          <div class="leaf leaf-left"><div class="page-title">
     <span>OFFICIAL GAZETTE · ISSUE NO. 001</span>
-    <h2>Founding Principles of The Obedient Published</h2>
+    <h2 id="news-title" tabindex="-1">Founding Principles of The Obedient Published</h2>
     <p>02 July 2026</p>
   </div>
 
@@ -438,7 +275,8 @@
       shared by every citizen.
     </p>
 
-    <ol>
+    </article></div>
+          <div class="leaf leaf-right"><div class="gazette-rules"><ol>
       <li>
         <strong>Accountability</strong>
         <p>Everyone will pay for their actions. Be careful with your choices.</p>
@@ -472,28 +310,30 @@
     <blockquote>
       “One Nation. Four States. One Principle: Respect.”
     </blockquote>
-  </article>
+  </div>
 
-  <div class="page-number">09</div>
-</section>
+  </div>
+        </section>
+        <section class="spread closing" id="final" aria-labelledby="final-title" hidden>
+          <div class="leaf leaf-left"><h2 id="final-title" tabindex="-1">Only The Obedient Will Enter It</h2>
+      <h3 lang="ar" dir="rtl">لن يدخلها إلا المطيع</h3>
 
-    <!-- ================= FINAL PAGE ================= -->
-
-    <section class="page final" id="final">
-      <h2>Only The Obedient Will Enter It</h2>
-      <h3>لن يدخلها إلا المطيع</h3>
-
-      <div class="page-number">10</div>
-    </section>
-
+      </div>
+          <div class="leaf leaf-right"><div class="emblem-plate"><img class="" src="images/favicon.png" alt="The Obedient emblem" width="500" height="500"></div></div>
+        </section>
+      </div>
+    </div>
+    <nav class="reader-controls" aria-label="Page turns">
+      <button class="turn-button" id="back" type="button" disabled><span aria-hidden="true">←</span> Back</button>
+      <div class="folio" aria-live="polite" aria-atomic="true"><span id="page-label">Cover</span><span id="page-count">1 / 15</span></div>
+      <button class="turn-button" id="next" type="button">Next <span aria-hidden="true">→</span></button>
+    </nav>
+    <p class="swipe-hint">Swipe left or right to turn the page</p>
   </main>
-
-  <!-- ================= FOOTER ================= -->
-
-  <footer>
-    <p>© The Obedient</p>
-  </footer>
-
-  <script src="script.js"></script>
+  <dialog class="artwork-dialog" aria-label="Full-size illustration">
+    <button class="close-artwork" type="button">Close <span aria-hidden="true">×</span></button>
+    <img alt="">
+  </dialog>
+  <noscript><style>.spread[hidden]{display:grid !important}.spread{max-height:none;min-height:0}.reader-controls,.swipe-hint,.gallery-controls{display:none}</style></noscript>
 </body>
 </html>
