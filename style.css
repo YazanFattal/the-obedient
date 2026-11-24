@@ -9,15 +9,18 @@
   --serif: "Cinzel", Georgia, serif;
   --heading: Georgia, "Times New Roman", serif;
   --sans: "Inter", system-ui, sans-serif;
-  --page-height: clamp(560px, calc(100svh - 220px), 760px);
 }
 
 *, *::before, *::after { box-sizing: border-box; }
 [hidden] { display: none !important; }
-html { overscroll-behavior-x: none; }
+html { height: 100%; overflow: hidden; overscroll-behavior-x: none; }
 body {
   margin: 0;
-  min-height: 100svh;
+  height: 100svh;
+  height: 100dvh;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  overflow: hidden;
   background: radial-gradient(ellipse at 50% 0%, #3e4637, var(--desk) 65%);
   color: #f2eddf;
   font: 15px/1.5 var(--sans);
@@ -32,7 +35,7 @@ button:focus-visible, a:focus-visible { outline: 2px solid currentColor; outline
 .masthead {
   width: min(540px, 100% - 32px);
   min-height: 62px;
-  margin: auto;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -46,9 +49,10 @@ button:focus-visible, a:focus-visible { outline: 2px solid currentColor; outline
 .index-link span { color: var(--gold); }
 .index-link:hover { color: var(--gold); }
 
-.reader { width: min(540px, 100% - 24px); margin: 22px auto 24px; }
+.reader { width: min(540px, 100% - 24px); min-height: 0; max-height: 860px; display: grid; grid-template-rows: minmax(0, 1fr) auto auto; gap: 16px; margin: 22px auto 20px; }
 .book-frame {
   position: relative;
+  min-height: 0;
   border: 1px solid #826c50;
   border-radius: 11px 16px 16px 11px;
   padding: 7px 8px 13px;
@@ -56,7 +60,7 @@ button:focus-visible, a:focus-visible { outline: 2px solid currentColor; outline
   box-shadow: 0 26px 42px #0006, 0 4px 0 #1a1712;
 }
 
-.book { position: relative; isolation: isolate; touch-action: pan-y pinch-zoom; }
+.book { position: relative; height: 100%; container-type: size; isolation: isolate; touch-action: pan-y pinch-zoom; }
 .book::after {
   content: "";
   position: absolute;
@@ -71,7 +75,7 @@ button:focus-visible, a:focus-visible { outline: 2px solid currentColor; outline
   --gutter: clamp(24px, 6vw, 42px);
   display: grid;
   grid-template-columns: minmax(0, 1fr);
-  height: var(--page-height);
+  height: 100%;
   grid-template-rows: auto;
   align-content: start;
   border-radius: 7px 11px 11px 7px;
@@ -163,7 +167,7 @@ button:focus-visible, a:focus-visible { outline: 2px solid currentColor; outline
 .gallery-controls button { width: 44px; min-height: 44px; border: 1px solid #7e6c54; border-radius: 3px; color: var(--ink); background: transparent; cursor: pointer; }
 .gallery-controls button:hover { background: #e6d7bd; }
 
-.reader-controls { display: grid; grid-template-columns: 112px minmax(0, 1fr) 112px; align-items: center; gap: 12px; width: min(440px, 100%); margin: 26px auto 0; }
+.reader-controls { display: grid; grid-template-columns: 112px minmax(0, 1fr) 112px; align-items: center; gap: 12px; width: min(440px, 100%); margin: 0 auto; }
 .turn-button {
   display: flex;
   justify-content: center;
@@ -190,11 +194,10 @@ button:focus-visible, a:focus-visible { outline: 2px solid currentColor; outline
 .close-artwork { position: absolute; top: 5px; right: 8px; min-height: 42px; color: inherit; background: transparent; border: 0; cursor: pointer; }
 
 @media (max-width: 700px) {
-  :root { --page-height: clamp(320px, calc(100svh - 190px), 760px); }
   .masthead { width: calc(100% - 32px); min-height: 58px; }
   .wordmark { gap: 8px; font-size: 12px; }
   .wordmark img { width: 26px; height: 26px; }
-  .reader { width: calc(100% - 24px); margin: 18px auto 18px; }
+  .reader { width: min(540px, 100% - 24px); gap: 12px; margin: 14px auto 12px; }
   .book-frame { padding: 4px 5px 10px; }
   .spread { --gutter: clamp(22px, 6.3vw, 44px); }
   .leaf { padding: 23px var(--gutter); overflow: visible; }
@@ -216,7 +219,7 @@ button:focus-visible, a:focus-visible { outline: 2px solid currentColor; outline
   .contents-continuation { margin-top: 0; border-top: 1px solid #4a40322d; }
   .emblem-plate img { width: min(50%, 185px); }
   .emblem-small { display: none; }
-  .reader-controls { grid-template-columns: 82px minmax(0, 1fr) 82px; gap: 8px; margin-top: 15px; }
+  .reader-controls { grid-template-columns: 82px minmax(0, 1fr) 82px; gap: 8px; }
   .turn-button { gap: 5px; }
 }
 
@@ -226,6 +229,22 @@ button:focus-visible, a:focus-visible { outline: 2px solid currentColor; outline
 }
 
 @media (pointer: coarse) {
-  .swipe-hint { display: block; color: #d0c7b3; margin: 9px 0 0; text-align: center; font-size: 11px; }
+  .swipe-hint { display: block; color: #d0c7b3; margin: 0; text-align: center; font-size: 11px; }
+}
+
+@media (max-height: 650px) {
+  .masthead { min-height: 48px; }
+  .reader { margin-top: 10px; margin-bottom: 8px; gap: 8px; }
+}
+
+@container (max-height: 580px) {
+  .cover .leaf-left { padding-top: 22px; padding-bottom: 16px; }
+  .cover-type h1 { font-size: 40px; margin: 12px 0; }
+  .cover-type h1 span { display: inline; font-size: .65em; }
+  .cover-rule { margin-bottom: 12px; }
+  .cover-type .cover-motto { font-size: 15px; }
+  .cover-emblem { width: min(42%, 140px); }
+  .cover .leaf-right { padding-bottom: 22px; }
+  .cover-plate { gap: 10px; }
 }
 
